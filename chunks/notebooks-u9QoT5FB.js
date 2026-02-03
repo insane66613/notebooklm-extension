@@ -1,0 +1,1 @@
+import{c}from"./createLucideIcon-C26wniJw.js";const a=c("check",[["path",{d:"M20 6 9 17l-5-5",key:"1gmf2c"}]]),e=c("copy",[["rect",{width:"14",height:"14",x:"8",y:"8",rx:"2",ry:"2",key:"17jyea"}],["path",{d:"M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2",key:"zix9uf"}]]),t=100,s=150,h=150;export{a as C,t as F,s as N,e as a,h as b};

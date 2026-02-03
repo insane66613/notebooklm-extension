@@ -1,0 +1,1 @@
+import{b as e,$ as a,a0 as s}from"./index-xxrclbWe.js";async function n(a,n){return new Promise(r=>{e.runtime.sendMessage({type:s,eventName:a,params:n},e=>{r(e)})})}async function r(s,n,r){return new Promise(t=>{e.runtime.sendMessage({type:a,pageTitle:s,pageLocation:n,params:r},e=>{t(e)})})}export{n as a,r as b};

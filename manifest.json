@@ -1,0 +1,90 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "manifest_version": 3,
+    "name": "ExtendLM - NotebookLM Extension",
+    "description": "Organize with folders, easily import sources and manage your notebooks with ExtendLM - NotebookLM Extension.",
+    "version": "1.8.0",
+    "icons": {
+        "16": "icon/16.png",
+        "32": "icon/32.png",
+        "48": "icon/48.png",
+        "96": "icon/96.png",
+        "128": "icon/128.png"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "addsourcesmodal.html",
+                "folders.html"
+            ],
+            "matches": [
+                "https://notebooklm.google.com/*"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "https://notebooklm.google.com/*",
+        "https://api.extendlm.com/*",
+        "https://extendlm.com/*",
+        "https://www.extendlm.com/*",
+        "https://www.google-analytics.com/*"
+    ],
+    "optional_host_permissions": [
+        "https://*/*",
+        "http://*/*"
+    ],
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "scripting",
+        "offscreen",
+        "debugger",
+        "storage",
+        "background",
+        "downloads",
+        "tabCapture",
+        "sidePanel",
+        "contextMenus",
+        "bookmarks"
+    ],
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Alt+N"
+            },
+            "description": "Open ExtendLM popup"
+        },
+        "add-current-page": {
+            "suggested_key": {
+                "default": "Alt+A"
+            },
+            "description": "Add current page to NotebookLM"
+        },
+        "open-side-panel": {
+            "suggested_key": {
+                "default": "Alt+S"
+            },
+            "description": "Open side panel"
+        }
+    },
+    "side_panel": {
+        "default_path": "sidepanel.html"
+    },
+    "background": {
+        "service_worker": "background-wrapper.js",
+        "type": "module"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://notebooklm.google.com/*"
+            ],
+            "js": [
+                "content-scripts/content.js"
+            ]
+        }
+    ]
+}
